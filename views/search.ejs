@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Search Results</title>
+</head>
+<body>
+    <% if (movies && movies.length > 0) { %>
+        <h1>Search Results</h1>
+        <ul>
+            <% movies.forEach(movie => { %>
+                <li><strong>Title:</strong> <%= movie.title %></li>
+                <li><strong>Year:</strong> <%= movie.year %></li>
+                <li><strong>Rated:</strong> <%= movie.rated %></li>
+                <li><strong>Released:</strong> <%= movie.released %></li>
+                <li><strong>Runtime:</strong> <%= movie.runtime %></li>
+                <li><strong>Genre:</strong> <%= movie.genre %></li>
+                <li><strong>Director:</strong> <%= movie.director %></li>
+                <li><strong>Writer:</strong> <%= movie.writer %></li>
+                <li><strong>Actors:</strong> <%= movie.actors %></li>
+                <li><strong>Plot:</strong> <%= movie.plot %></li>
+            <% }) %>
+        </ul>
+    <% } else { %>
+        <h1>No results found</h1>
+    <% } %>
+</body>
+</html>
